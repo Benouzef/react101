@@ -1,15 +1,17 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Movies from "./Movies";
 
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/movies" component={Movies} />
-    </Switch>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/movies" component={Movies} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
